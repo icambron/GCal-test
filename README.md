@@ -21,28 +21,28 @@ One change you might have to make to the code is to specify the location of your
 
 Here's a sample output:
 
-TASK: getting the list of calendars
-Sending get to https://www.googleapis.com/calendar/v3/users/me/calendarList, body: 
-`a calendar name here`
-TASK: creating a new calendar
-Sending post to https://www.googleapis.com/calendar/v3/calendars, body: {"summary":"Hey, a calendar!"}
-Error: {"errors"=>[{"domain"=>"usageLimits", "reason"=>"quotaExceeded", "message"=>"Quota Exceeded"}], "code"=>403, "message"=>"Quota Exceeded"}, Description: 
-Response: {
- "error": {
-  "errors": [
-   {
-    "domain": "usageLimits",
-    "reason": "quotaExceeded",
-    "message": "Quota Exceeded"
-   }
-  ],
-  "code": 403,
-  "message": "Quota Exceeded"
- }
-}
-/home/isaac/.rvm/gems/ruby-1.9.2-p290/gems/oauth2-0.5.2/lib/oauth2/client.rb:107:in `request': OAuth2::Error (OAuth2::Error)
-  from /home/isaac/.rvm/gems/ruby-1.9.2-p290/gems/oauth2-0.5.2/lib/oauth2/access_token.rb:98:in `request'
-  from test.rb:47:in `make_request'
-  from test.rb:64:in `<main>'
+    TASK: getting the list of calendars
+    Sending get to https://www.googleapis.com/calendar/v3/users/me/calendarList, body: 
+    `primary calendar name here`
+    TASK: creating a new calendar
+    Sending post to https://www.googleapis.com/calendar/v3/calendars, body: {"summary":"Hey, a calendar!"}
+    Error: {"errors"=>[{"domain"=>"usageLimits", "reason"=>"quotaExceeded", "message"=>"Quota Exceeded"}], "code"=>403, "message"=>"Quota Exceeded"}, Description: 
+    Response: {
+     "error": {
+      "errors": [
+       {
+        "domain": "usageLimits",
+        "reason": "quotaExceeded",
+        "message": "Quota Exceeded"
+       }
+      ],
+      "code": 403,
+      "message": "Quota Exceeded"
+     }
+    }
+    /home/isaac/.rvm/gems/ruby-1.9.2-p290/gems/oauth2-0.5.2/lib/oauth2/client.rb:107:in `request': OAuth2::Error (OAuth2::Error)
+      from /home/isaac/.rvm/gems/ruby-1.9.2-p290/gems/oauth2-0.5.2/lib/oauth2/access_token.rb:98:in `request'
+      from test.rb:47:in `make_request'
+      from test.rb:64:in `<main>'
 
 Where, like I said in the thread, there's no way I've really hit a quota issue. The 503 looks very similar
